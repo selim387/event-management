@@ -1,0 +1,60 @@
+
+<div class="container my-5">
+  <div class="row">
+    <div class="col-12">
+      <div class="alert alert-danger" [hidden]="!hasError">
+        {{ errorMessage }}
+      </div>
+      <div class="alert alert-success" [hidden]="!success">
+        {{ errorMessage }}
+      </div>
+    </div>
+    <div class="col">
+      <table class="table table-bordered">
+        <thead class="bg-dark text-light">
+        <tr>
+          <th>Id</th>
+          <th width="20%">username</th>
+
+
+
+          <th width="20%">email</th>
+          <th width="10%">first name</th>
+          <th width="10%">last name</th>
+          <th>age</th>
+
+          <th width="10%">Operation</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr *ngFor="let u of utilisateurs">
+          <td>{{ u.id }}</td>
+
+          <td>{{ u.username }}</td>
+
+
+
+
+          <td>{{ u.email}}</td>
+          <td>{{ u.fname}}</td>
+          <td>{{ u.lname}}</td>
+          <td>{{ u.age}}</td>
+
+
+
+
+          <td>
+            <button class="btn btn-sm btn-danger" (click)="deleteUser(u.id)">Delete</button>
+
+
+          </td>
+
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+

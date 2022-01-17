@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Colorlib Templates">
+  <meta name="author" content="Colorlib">
+  <meta name="keywords" content="Colorlib Templates">
+  <script src="../../product.service.ts"></script>
+</head>
+<!-- Title Page-->
+
+<!-- Icons font CSS-->
+
+<body>
+<div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+  <div class="wrapper wrapper--w790">
+    <div class="card card-5">
+      <div class="card-heading">
+        <h2 class="title">Adding Event</h2>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="editEvent">
+
+          <div class="form-row">
+            <div class="name">Name  </div>
+
+            <div class="value" >
+
+              <div class="col-6">
+                <div class="input-group">
+
+
+                  <input class="input--style-5" type="text" formControlName="title" >
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="name">Description</div>
+
+            <div class="value">
+              <div class="input-group">
+                <input class="input--style-5" type="description" formControlName="description" >
+              </div>
+            </div>
+
+          </div>
+          <div class="form-row m-b-55">
+
+            <div class="name">Price </div>
+            <div class="value">
+              <div class="row row-refine">
+
+                <div class="col-4">
+
+
+                  <div class="input-group-desc">
+
+                    <input class="input--style-5" formControlName="price" type="text" name="area_code" >
+
+                  </div>
+
+                </div>
+
+
+              </div>
+
+            </div>
+          </div>
+
+
+          <div class="form-row m-b-55">
+            <div class="name">Date</div>
+            <div class="value">
+              <div class="row row-refine">
+                <div class="col-5">
+                  <div class="input-group-desc">
+                    <input class="input--style-5" type="text" formControlName="date" name="area_code" >
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn--radius-2 btn--red" type="submit" (click)="AddProduct()">Add</button>
+
+        </form>
+        <br>
+        <h3 class="mat-subheading-1 accent-color">{{msg}}</h3>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
